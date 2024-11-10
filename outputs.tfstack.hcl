@@ -1,5 +1,5 @@
-output "lambda_urls" {
+output "bucket_ids" {
   type = list(string)
-  description = "URLs to invoke lambda functions"
+  description = "bucket  ids"
   value = [ for x in component.s3: x.bucket_id ]
 }
